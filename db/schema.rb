@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130407083003) do
+ActiveRecord::Schema.define(:version => 20130408111909) do
 
   create_table "actors", :force => true do |t|
     t.string   "name"
@@ -22,10 +22,11 @@ ActiveRecord::Schema.define(:version => 20130407083003) do
   create_table "events", :force => true do |t|
     t.string   "type"
     t.text     "data"
-    t.datetime "github_created_at", :null => false
+    t.datetime "github_created_at",                 :null => false
     t.integer  "actor_id"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+    t.string   "checksum",          :default => "", :null => false
   end
 
   add_index "events", ["actor_id"], :name => "index_events_on_actor_id"
