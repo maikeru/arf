@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130408111909) do
+ActiveRecord::Schema.define(:version => 20130409125605) do
 
   create_table "actors", :force => true do |t|
     t.string   "name"
@@ -30,5 +30,6 @@ ActiveRecord::Schema.define(:version => 20130408111909) do
   end
 
   add_index "events", ["actor_id"], :name => "index_events_on_actor_id"
+  add_index "events", ["checksum"], :name => "index_events_on_checksum", :unique => true
 
 end

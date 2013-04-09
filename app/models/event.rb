@@ -7,6 +7,8 @@ class Event < ActiveRecord::Base
   # seems the mass-assignment checks were added in Rails 3.2.3 which the screencast pre-dates
 
   def self.create_from_record actor, record
+    record['checksum'].force_encoding 'UTF-8'
+
     create_params = {
       :type              => record['type'],
       :actor             => actor,

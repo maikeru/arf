@@ -11,7 +11,11 @@ class Actor < ActiveRecord::Base
 
     records.each do |record|
       actor = Actor.find_or_create_by_name 'maikeru'
-      event = Event.create_from_record actor, record
+      begin
+        event = Event.create_from_record actor, record
+      rescue
+        next
+      end
     end
   end
 end
