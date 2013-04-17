@@ -9,6 +9,16 @@ Next build the web-application part. We want to be able to:
 * Display stats about the user
 * Set goals relating to the stats
 
+Some stats to display:
+Counts for each of the events
+* CommitCommentEvent
+* IssueCommentEvent
+* IssuesEvent
+* WatchEvent
+* PullRequestEvent
+* PushEvent
+* FollowEvent
+
 Goal Setting
 ------------
 The idea is to be able to set goals for your Github account.

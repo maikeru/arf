@@ -1,4 +1,7 @@
 Arfarfarf::Application.routes.draw do
+  get "stats/index"
+  match 'stats/for_user/:id' => 'stats#for_user'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

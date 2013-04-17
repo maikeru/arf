@@ -1,0 +1,7 @@
+<h1>Stats#for_user</h1>
+<p>Find me in app/views/stats/for_user.html.erb</p>
+<p>Stats for user : <%= params[:id] %> </p>
+<p>Total number of events for user: <%= @events.count %> </p>
+<% @type_count.each do |type, count| %>
+  <p><%= type %> : <%= count %></p>
+<% end %>
